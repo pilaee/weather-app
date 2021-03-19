@@ -7,7 +7,7 @@ body {
     background-color: white;
     background-image: url(https://unsplash.it/600/400?image=1043&blur);
     color: rgb(51, 34, 17);
-  }
+}
   
   h1 {
     font-weight: 400;
@@ -80,3 +80,4 @@ body {
   
   #cold {
     opacity: 0.75;
+  }
