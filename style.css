@@ -1,0 +1,82 @@
+body {
+    font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin: 60px auto;
+    max-width: 500px;
+    min-width: 320px;
+    background-color: white;
+    background-image: url(https://unsplash.it/600/400?image=1043&blur);
+    color: rgb(51, 34, 17);
+  }
+  
+  h1 {
+    font-weight: 400;
+    color: #fff;
+  }
+  
+  h2 {
+    font-style: oblique;
+    color: #fff;
+  }
+  
+  form {
+    margin-bottom: 30px;
+  }
+  input {
+    border-color: #00af91;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  li {
+    color: #fff;
+    line-height: 2rem;
+  }
+  .app {
+    padding: 40px 30px 40px 30px;
+    box-shadow: rgba(51, 34, 17, 0.7);
+  }
+  
+  .temperature {
+    font-size: 5.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #change-city {
+    border-color: blanchedalmond;
+    color: blanchedalmond;
+    font-weight: bold;
+    transition: all 150ms ease-in-out;
+  }
+  
+  #changeCity:hover {
+    background-color: #66a6ff;
+  }
+  
+  #currentLocation {
+    border-color: #00af91;
+    color: #fff;
+    transition: all 150ms ease-in-out;
+  }
+  
+  #currentLocation:hover {
+    background-color: #00af91;
+  }
+  
+  #forecast {
+    text-align: left;
+    padding-right: 40px;
+  }
+  
+  #Day {
+    font-weight: bold;
+  }
+  
+  #icon {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  #cold {
+    opacity: 0.75;
