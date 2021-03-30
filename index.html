@@ -25,132 +25,111 @@
     />
   </head>
   <body>
-  <div class="container">
-      <div class="app">
-        <h1 id="city">
-          Berlin
-        </h1>
-        <p style="color: #fff; font-size: 0.8em;" id="date">
-          Sunday </br> 14:45
-        </p>
+    <div class="container">
 
-        <h1 class="temperature">
-          20°C
-        </h1>
-        <p id="descrToday" style="color: #fff; font-weight: bold;">rainy</p>
-
-        <div class="row" id="input">
-          <div class="col-10" id="inputCity">
-            <form class="row g-3">
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Change City"
-                  id="city-input"/>
-                <button
-                  class="btn btn-outline-secondary"
-                  type="button"
-                  id="change-city">
-                  <i class="fas fa-search"></i>
-                </button>
-              </div>
-            </form>
+      <div class="weather-container">
+        <div class="clearfix">
+  
+  
+          <form id="weather__form" class="float-left">
+            <input type="text" id="weather__form-location" placeholder="Enter a city" autocomplete="off" autofocus="on">
+            <input type="submit" value="Search" class="btn btn-primary">
+  
+          </form>
+          <button id="weather-refresh" class="float-left btn btn-success">Current Location</button>
+        </div>
+  
+  
+        <div class="weather-summary">
+          <div class="weather-summary-header">
+            <h1 id="weather-location"></h1>
+            <div id="weather-date" class="weather-detail__text">
+            </div>
+            <div class="weather-detail__text" id="weather-description"></div>
           </div>
-
-          <div class="col-2" id="inputLocation">
-            <button
-              class="btn btn-outline-secondary"
-              type="button"
-              id="currentLocation">
-              <i class="fas fa-map-marker-alt"></i>
-            </button>
+  
+          <div class="row">
+            <div class="col-md-6">
+              <div class="clearfix">
+                <img class="weather__icon weather__icon--today">
+                <div class="weather-temp weather-temp--today">
+  
+                </div>
+                <div class="weather-unit__text weather-unit__text--today">
+                  °C
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="weather-detail__text">
+                Precipitation: <span id="precipitation-probality"></span>
+              </div>
+              <div class="weather-detail__text">
+                Wind: <span id="wind-speed"></span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="row" id="forecast">
-          <div class="col-6" id="Day">
-            <ul>
-              <li class="forecastOne">
-                Monday
-              </li>
-              <li>
-                Tuesday
-              </li>
-              <li>
-                Wednesday
-              </li>
-              <li>
-                Thursday
-              </li>
-              <li>
-                Friday 
-              </li>
-            </ul>
+        <div class="days clearfix">
+          <div class="day__block">
+            <div class="day__block-date"></div>
+            <img class="day__block-image">
+            <div class="day__block-temps">
+              <span class="day__block-temp"></span>
+            </div>
           </div>
-
-          <div class="col-2" id="Icons">
-            <ul>
-              <li>
-                <i class="fas fa-cloud-showers-heavy"></i>
-              </li>
-              <li>
-                <i class="fas fa-cloud-showers-heavy"></i>
-              </li>
-              <li>
-                <i class="fas fa-cloud"></i>
-              </li>
-              <li>
-                <i class="fas fa-sun"></i>
-              </li>
-              <li>
-                <i class="fas fa-cloud-showers-heavy"></i>
-              </li>
-            </ul>
+          <div class="day__block">
+            <div class="day__block-date"></div>
+            <img class="day__block-image">
+            <div class="day__block-temps">
+              <span class="day__block-temp"></span>
+            </div>
           </div>
-
-          <div class="col-2" id="warmth">
-            <ul>
-              <li>
-                8°C
-              </li>
-              <li>
-                7°C
-              </li>
-              <li>
-                8°C
-              </li>
-              <li>
-                6°C
-              </li>
-              <li>
-                5°C
-              </li>
-            </ul>
+          <div class="day__block">
+            <div class="day__block-date"></div>
+            <img class="day__block-image">
+            <div class="day__block-temps">
+              <span class="day__block-temp"></span>
+            </div>
           </div>
-
-          <div class="col-2" id="cold">
-            <ul>
-              <li>
-                2°C
-              </li>
-              <li>
-                0°C
-              </li>
-              <li>
-                0°C
-              </li>
-              <li>
-                -1°C
-              </li>
-              <li>
-                -3°C
-              </li>
-            </ul>
+          <div class="day__block">
+            <div class="day__block-date"></div>
+            <img class="day__block-image">
+            <div class="day__block-temps">
+              <span class="day__block-temp"></span>
+            </div>
+          </div>
+          <div class="day__block">
+            <div class="day__block-date"></div>
+            <img class="day__block-image">
+            <div class="day__block-temps">
+              <span class="day__block-temp"></span>
+            </div>
+          </div>
+          <div class="day__block">
+            <div class="day__block-date"></div>
+            <img class="day__block-image">
+            <div class="day__block-temps">
+              <span class="day__block-temp"></span>
+            </div>
+          </div>
+          <div class="day__block">
+            <div class="day__block-date"></div>
+            <img class="day__block-image">
+            <div class="day__block-temps">
+              <span class="day__block-temp"></span>
+            </div>
+          </div>
+          <div class="day__block">
+            <div class="day__block-date"></div>
+            <img class="day__block-image">
+            <div class="day__block-temps">
+              <span class="day__block-temp"></span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </body>
+  
   <script src="index.js"></script>
   <a href="https://github.com/pilaee/weather-app">Open-source code by Pollina Iliev</a> 
   </body>
