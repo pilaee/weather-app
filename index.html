@@ -4,60 +4,76 @@
     <title> Weather  Forecast</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
-    <link 
-    rel="stylesheet" 
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
-    crossorigin="anonymous"/>
-   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-   <link rel="stylesheet" href="style.css"/>
-  </head>
-  <body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/0cec109dc1.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+     <title>Weather APP</title>
+</head>
+<body>
     <div class="container">
-      <div class="card-body">
-          <ul class="list-inline">
-           <li class="list-inline-item" id="date"></li>
-          </ul>
-       <form id="search-form">
-        <div class="input-group mb-3">
-          <input 
-            id="city-input" 
-            type="search" 
-            class="form-control" 
-            placeholder="Search for a city ..." 
-            aria-describedby="button-addon2"
-          />
-          <div class="input-group-append">
-              <button 
-              id="city-input" 
-              type="submit"
-              value="search" 
-              class="btn btn-outline-light">🔍</button>
+        <div class="weather-wrapp">
+        <form class="form" id="search-form">
+        <div class="row">
+        <div class="col-7 mt-3 mx-3">
+        <input class="form-control form-control-sm" id="search-city" type="search" placeholder="Enter city" autocomplete="off" autofocus="on">
+        </div>
+        <div class="col-2 gap-3 d-flex mt-3 mx-2">
+        <div class="col">
+        <button class="btn btn-sm btn-primary-outline search-city-button" type="submit" id="search">
+        <i class="fas fa-search"></i>
+        </button>
+        </div>
+        </div>
+        </form>
+        <h2 class="currentCity">
+            <strong>
+            <i class="fas fa-map-marker-alt" id="emoji"></i>
+            <span class="city" id="city">
+            Berlin
+            </span>
+            </strong>
+            <span class="currentTime" id="date">
+                <br />
+                Wednesday, March 25, 2021 |
+                 10:30
+            </span>
+        </h2>
+        <p class= "specifications">
+            <span class="simbol">
+            <img src="" alt="clear" id="icon"/>
+            </span>
+            <span class="temperature" id="temperature">10</span>
+            <span class="units"><a href="#" id="Celsius" class="active">ºC</a>| <a href="#" id="Fahrenheit">ºF</a></span>
+            <div class="sky" id="sky">Cloudy</div>
+        </p>
+        <div class="main-card-tex">
+            <div class="description">
+            <div class="row">
+                <div class="col-6">
+                    <br />
+                    <span>Max: <i class="fas fa-arrow-up"></span></i><span id="max-temp"> 18</span>º
+                    <br />
+                    <span>Min: <i class="fas fa-arrow-down"></span></i><span id="min-temp"> 20</span>ºC
+                    <br />
+                    <span>Feels: <i class="fas fa-temperature-high"></span></i><span id="feels-like"> 20</span>ºC
+                 </div>   
+                <div class="col-6">
+                    <br />
+                    Humidity: <span id="humidity">55</span>%
+                    <br />
+                    Wind: <span id="wind">10</span>km/h
+                </div>
           </div>
         </div>
-      </form>
-       <h2 id="city"></h2>
-          <div class="temperature">
-              <ul class="list-inline">
-                <li class="weather-icon"></li>
-                      <img src=".." alt="" id ="icon">
-                <span id="temperature" class="temperature"></span>
-                <span class="units">
-                  <a href="#" id="celsius-link" class="active">°C</a>
-                      <span class="slash">|</span><a href="#" id="fahrenheit-link">°F</a>
-                   </span>
-                  <li id="description"></li>
-              </ul>
-          </div>
-              <div class="humidity-wind">
-                 <ul class="list-inline">
-                   <li class="list-inline-item"> Humidity: <span id="humidity"></span>%</li>
-                   <li class="list-inline-item"> Wind: <span id="wind"></span> km/h</li>   
-                 </ul>
-              </div>
-      <div class="row weather-forecast" id="forecast">
-      </div>
-      
+        </div> 
+        <hr /> 
+        <div class="row hour-forecast" id="hour-forecast"></div> 
+        </div>
+         </div>      
   </body>
   <script src="index.js"></script>
   <a href="https://github.com/pilaee/weather-app">Open-source code by Pollina Iliev</a> 

@@ -1,12 +1,18 @@
 body {
     font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
-    text-align: center;
-    margin: 60px auto;
-    max-width: 500px;
-    min-width: 320px;
+    text-align: cente;
     background-color: white;
     background-image: url(https://unsplash.it/600/400?image=1043&blur);
-    color: rgb(51, 34, 17);  
+    color: rgb(51, 34, 17);
+    margin: 0 auto;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 h2 {
