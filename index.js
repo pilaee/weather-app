@@ -1,4 +1,7 @@
 
+
+
+  "5f472b7acba333cd8a035ea85a0d4d4c";
   //show date
 
 function formatDate(timestamp) {
@@ -97,7 +100,8 @@ function displayWeather(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png');
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   let code = response.data.weather[0].icon;
@@ -179,7 +183,7 @@ function displayForecast(response) {
 
 function search(city) {
   let units = "metric";
-  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c"
+  let apiKey = "78e84724dd24f5c8d15376301785551c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayWeather);
 
