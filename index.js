@@ -1,8 +1,15 @@
-const apiKey ="78e84724dd24f5c8d15376301785551";
-const apiUrlWeather = "https://api.openweathermap.org/data/2.5/weather?";
-const apiUrlForecast = "https://api.openweathermap.org/data/2.5/forecast?";
-const units = "metric";
 
+//city search
+
+function search(city) {
+  let units = "metric";
+  let apiKey = "78e84724dd24f5c8d15376301785551";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayWeather);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function formatDate(){
     let now = new Date();
