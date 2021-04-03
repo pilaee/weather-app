@@ -22,12 +22,12 @@ let days=[
 }
 let day= days[date.getDay()];
 return`${day}${hours}:${minutes}`;
-{
+
 function displayForecast(){
-  let forecastElement=document.querySelector("#forecast");
-  let days=["Thu","Fri","Sat","Sun"];
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Thu","Fri","Sat","Sun"];
   let forecastHTML = `<div class="row"`;
-  day.forEach(function(day) {
+  day.forEach(function(day){
     forecastHTML=
     forecastHTML +
     `<div class="col-2">
@@ -76,7 +76,7 @@ function search(city){
 let apiKey = "78e84724dd24f5c8d15376301785551c";
 let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayTemperature);  
-
+}
 function handleSubmit(event){
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
@@ -114,6 +114,4 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 search("Berlin");
 
 displayForecast();
-
-
 
