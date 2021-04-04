@@ -18,8 +18,8 @@ let days=[
   "Friday",
   "Saturday"
 ];
-
 }
+
 let day= days[date.getDay()];
 return`${day}${hours}:${minutes}`;
 
@@ -28,7 +28,7 @@ function displayForecast(){
   let days = ["Thu","Fri","Sat","Sun"];
   let forecastHTML = `<div class="row"`;
   day.forEach(function(day){
-    forecastHTML=
+    forecastHTML =
     forecastHTML +
     `<div class="col-2">
     <div class="weather-forcast-date">${day}</div>
@@ -47,6 +47,13 @@ function displayForecast(){
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates){
+  console.log(coordinates);
+let apiKey = "78e84724dd24f5c8d15376301785551c";
+let apiUrl =`https://api.openweather.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayTemperature(response){
@@ -80,7 +87,7 @@ axios.get(apiUrl).then(displayTemperature);
 function handleSubmit(event){
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
-  search (cityInputElement.value);
+  search(cityInputElement.value);
 }
 
 function displayFahrenheitTemperature(event){
